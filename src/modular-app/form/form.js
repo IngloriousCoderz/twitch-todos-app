@@ -1,23 +1,11 @@
-import { useState } from "react";
-
-export default function Form({ onSubmit }) {
-  const [text, setText] = useState("");
-
-  const handleChange = (event) => setText(event.target.value);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onSubmit(text);
-    setText("");
-  };
-
+export default function Form({ text, onChange, onSubmit }) {
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={onSubmit}>
       <input
         placeholder="What next?"
         autoFocus
         value={text}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <button>Submit</button>
     </form>
