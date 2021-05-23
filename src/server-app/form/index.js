@@ -1,6 +1,9 @@
 import { useState } from "react";
+import FormComponent from "./form";
 
-export function useForm(onSubmit) {
+/** Container component */
+
+export default function Form({ onSubmit }) {
   const [text, setText] = useState("");
 
   const handleChange = (event) => setText(event.target.value);
@@ -11,5 +14,11 @@ export function useForm(onSubmit) {
     setText("");
   };
 
-  return { text, onChange: handleChange, onSubmit: handleSubmit };
+  return (
+    <FormComponent
+      text={text}
+      onChange={handleChange}
+      onSubmit={handleSubmit}
+    />
+  );
 }
