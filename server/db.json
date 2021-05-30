@@ -8,19 +8,12 @@
     {
       "id": 2,
       "text": "Seek for a job",
-      "done": true
+      "done": false
     },
     {
       "id": 3,
-      "text": "Forget everything"
-    },
-    {
-      "id": 4
-    },
-    {
-      "text": "Now it works!",
-      "done": false,
-      "id": 5
+      "text": "Forget everything",
+      "done": false
     }
   ]
 }
