@@ -6,14 +6,14 @@
       "done": true
     },
     {
-      "id": 2,
-      "text": "Seek for a job",
-      "done": false
-    },
-    {
       "id": 3,
       "text": "Forget everything",
       "done": false
+    },
+    {
+      "text": "New todo here!",
+      "id": 5,
+      "done": true
     }
   ]
 }
