@@ -1,8 +1,6 @@
-import { combineReducers, createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import * as api from "../../api";
-import text, { setText } from "./text";
-import todos from "./todos";
 
 export const fetchTodos = createAsyncThunk("todos/fetch", async () => {
   const todos = await api.fetchAll("todos");
@@ -34,10 +32,6 @@ export const removeTodo = createAsyncThunk(
     dispatch(fetchTodos());
   }
 );
-
-export { setText };
-
-export default combineReducers({ text, todos });
 
 export const selectText = (state) => state.text;
 export const selectTodos = (state) => state.todos;

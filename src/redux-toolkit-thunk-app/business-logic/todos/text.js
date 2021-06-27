@@ -14,7 +14,7 @@ const slice = createSlice({
   },
 
   extraReducers: {
-    [addTodo](state, action) {
+    [addTodo.fulfilled](state, action) {
       return "";
     },
   },
